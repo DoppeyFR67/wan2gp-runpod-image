@@ -41,7 +41,15 @@ WORKDIR /opt/wan2gp
 RUN python -m pip install --upgrade pip setuptools wheel \
     && python -m pip install torch==2.10.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130 \
     && python -m pip install -r requirements.txt \
-    && python -m pip check
+    && python - <<'PY'
+import decord
+import torch
+import transformers
+from mmgp import offload, safetensors2, profile_type, quant_router
+from optimum.quanto import QModuleMixin
+
+print(f"python smoke OK, torch={torch.__version__}, transformers={transformers.__version__}")
+PY
 
 COPY runpod-start.sh /opt/wan2gp/runpod-start.sh
 
