@@ -5,7 +5,7 @@ ARG WAN2GP_REF=main
 
 ENV DEBIAN_FRONTEND=noninteractive \
     CONDA_DIR=/opt/conda \
-    PATH=/opt/conda/bin:/opt/conda/envs/wan2gp/bin:$PATH \
+    PATH=/opt/conda/envs/wan2gp/bin:/opt/conda/bin:$PATH \
     PYTHONNOUSERSITE=1 \
     PIP_NO_CACHE_DIR=1 \
     HF_HOME=/workspace/.cache/huggingface \

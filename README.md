@@ -4,8 +4,8 @@ This repo builds a RunPod-ready Wan2GP image in GitHub Actions.
 
 Default image tags:
 
-- `ghcr.io/lukasdoppler/wan2gp-runpod:cu130`
-- `ghcr.io/lukasdoppler/wan2gp-runpod:latest`
+- `ghcr.io/doppeyfr67/wan2gp-runpod:cu130`
+- `ghcr.io/doppeyfr67/wan2gp-runpod:latest`
 
 If the repo has `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` secrets, the same workflow also pushes:
 
@@ -14,6 +14,6 @@ If the repo has `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` secrets, the same wor
 
 RunPod template basics:
 
-- Container image: `ghcr.io/lukasdoppler/wan2gp-runpod:cu130`
+- Container image: `ghcr.io/doppeyfr67/wan2gp-runpod:cu130`
 - HTTP port: `7860`
 - Volume mount path: `/workspace`

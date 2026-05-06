@@ -16,7 +16,7 @@ permissions:
   packages: write
 
 env:
-  GHCR_IMAGE: ghcr.io/lukasdoppler/wan2gp-runpod
+  GHCR_IMAGE: ghcr.io/doppeyfr67/wan2gp-runpod
   DOCKERHUB_IMAGE: doppey/wan2gp
   HAS_DOCKERHUB: ${{ secrets.DOCKERHUB_USERNAME != '' && secrets.DOCKERHUB_TOKEN != '' }}
 
